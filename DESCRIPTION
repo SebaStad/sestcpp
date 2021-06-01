@@ -12,3 +12,5 @@ Imports: Rcpp (>= 1.0.6),
   RcppArmadillo
 LinkingTo: Rcpp,
   RcppArmadillo
+URL: https://github.com/SebaStad/sestcpp
+BugReports: https://github.com/SebaStad/sestcpp/issues
