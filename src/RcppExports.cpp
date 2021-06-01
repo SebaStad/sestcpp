@@ -8,7 +8,7 @@ using namespace Rcpp;
 
 // melt_pp
 arma::mat melt_pp(NumericVector myArray);
-RcppExport SEXP _myutil_melt_pp(SEXP myArraySEXP) {
+RcppExport SEXP _sestcpp_melt_pp(SEXP myArraySEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -19,7 +19,7 @@ END_RCPP
 }
 // melt_pp2
 DataFrame melt_pp2(NumericVector myArray);
-RcppExport SEXP _myutil_melt_pp2(SEXP myArraySEXP) {
+RcppExport SEXP _sestcpp_melt_pp2(SEXP myArraySEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -30,7 +30,7 @@ END_RCPP
 }
 // rcpp_hello_world
 List rcpp_hello_world();
-RcppExport SEXP _myutil_rcpp_hello_world() {
+RcppExport SEXP _sestcpp_rcpp_hello_world() {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -40,13 +40,13 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_myutil_melt_pp", (DL_FUNC) &_myutil_melt_pp, 1},
-    {"_myutil_melt_pp2", (DL_FUNC) &_myutil_melt_pp2, 1},
-    {"_myutil_rcpp_hello_world", (DL_FUNC) &_myutil_rcpp_hello_world, 0},
+    {"_sestcpp_melt_pp", (DL_FUNC) &_sestcpp_melt_pp, 1},
+    {"_sestcpp_melt_pp2", (DL_FUNC) &_sestcpp_melt_pp2, 1},
+    {"_sestcpp_rcpp_hello_world", (DL_FUNC) &_sestcpp_rcpp_hello_world, 0},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_myutil(DllInfo *dll) {
+RcppExport void R_init_sestcpp(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }

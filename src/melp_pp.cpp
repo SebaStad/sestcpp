@@ -19,6 +19,7 @@ using namespace arma;
 //'
 //' @param myarray 2D-Array for melt to use!
 //' @return melt_matrix melted matrix!
+//' @export
   // [[Rcpp::export]]
 arma::mat melt_pp(NumericVector myArray) {
   // DataFrame melt_pp(NumericVector myArray) {
@@ -58,8 +59,9 @@ arma::mat melt_pp(NumericVector myArray) {
   
   //' emulates reshape2::melt
 //'
-  //' @param myarray 2D-Array for melt to use!
+//' @param myarray 2D-Array for melt to use!
 //' @return dataframe melted matrix!
+//' @export
     // [[Rcpp::export]]
   DataFrame melt_pp2(NumericVector myArray) {
     NumericVector vecArray(myArray);

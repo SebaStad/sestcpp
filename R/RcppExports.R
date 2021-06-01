@@ -2,21 +2,22 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 #'
-NULL
+#' @param myarray 2D-Array for melt to use!
+#' @return melt_matrix melted matrix!
+#' @export
+melt_pp <- function(myArray) {
+    .Call(`_sestcpp_melt_pp`, myArray)
+}
 
 #'
 #' @param myarray 2D-Array for melt to use!
-#' @return melt_matrix melted matrix!
-melt_pp <- function(myArray) {
-    .Call(`_myutil_melt_pp`, myArray)
-}
-
 #' @return dataframe melted matrix!
+#' @export
 melt_pp2 <- function(myArray) {
-    .Call(`_myutil_melt_pp2`, myArray)
+    .Call(`_sestcpp_melt_pp2`, myArray)
 }
 
 rcpp_hello_world <- function() {
-    .Call(`_myutil_rcpp_hello_world`)
+    .Call(`_sestcpp_rcpp_hello_world`)
 }
 
